@@ -20,22 +20,36 @@ export default async function handler(req, res) {
     }
   });
 
+
   try {
 
     await transporter.sendMail({
-      from: process.env.MAIL_USER,
-      to: "bescheiben@gmail.com",
-      replyTo: email,
-      subject: `Contato de ${nome}`,
-      text: `
-Nome: ${nome}
-Email: ${email}
-Empresa: ${empresa}
+  from: `"Site Bescheiben" <${process.env.MAIL_USER}>`,
+  to: "bescheiben@gmail.com",
+  replyTo: email,
+  subject: `Novo Lead | ${empresa} | ${nome}`,
+  html: `
+  <div style="font-family: Arial, sans-serif; max-width:600px;">
+    
+    <h2 style="color:#4F46E5;">Novo contato do site</h2>
 
-Mensagem:
-${mensagem}
-`
-    });
+    <p>Um novo lead enviou mensagem pelo formulário.</p>
+
+    <hr/>
+
+    <p><strong>Nome:</strong> ${nome}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Empresa:</strong> ${empresa}</p>
+
+    <p><strong>Mensagem:</strong></p>
+
+    <div style="background:#f5f5f5;padding:12px;border-radius:6px;">
+      ${mensagem}
+    </div>
+
+  </div>
+  `
+});
 
     return res.status(200).json({ success: true });
 
