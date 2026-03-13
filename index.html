@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ─────────────────────────────────────────────────── -->
+  <title>Bescheiben Digital Agency — Marketing Digital Estruturado para Empresas</title>
+  <meta name="description"  content="Criamos sites profissionais, estratégias digitais e sistemas de geração de leads para empresas que querem estruturar sua presença digital e crescer." />
+  <meta name="keywords"     content="agência digital, criação de sites, marketing digital, geração de leads, branding, automação de marketing" />
+  <meta name="author"       content="Bescheiben Digital Agency" />
+  <link rel="canonical"     href="https://bescheiben.com.br" />
+
+  <!-- ── Open Graph ───────────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://bescheiben.com.br" />
+  <meta property="og:title"       content="Bescheiben — Marketing Digital Estruturado" />
+  <meta property="og:description" content="Criamos sites, estratégias digitais e sistemas de geração de leads para empresas que querem crescer." />
+
+  <!-- ── Twitter Card ─────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Bescheiben Digital Agency" />
+  <meta name="twitter:description" content="Marketing digital estruturado para empresas." />
+
+  <!-- ── Fontes: Sora + JetBrains Mono (Google Fonts) ─────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ── Favicon inline (SVG) — sem arquivo externo ──────────── -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23C4B5FD'/%3E%3Cstop offset='100%25' stop-color='%236B4EFF'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%236B4EFF'/%3E%3Cstop offset='100%25' stop-color='%234A32D4' stop-opacity='.7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='80' height='80' rx='18' fill='%23111827'/%3E%3Cline x1='22' y1='14' x2='22' y2='68' stroke='url(%23a)' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M22 14 L56 14 Q68 14 68 26 Q68 38 56 38 L22 38' stroke='url(%23a)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M22 38 L58 38 Q72 38 72 51 Q72 64 58 64 L22 64' stroke='url(%23b)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='22' cy='68' r='6' fill='%236B4EFF'/%3E%3Ccircle cx='22' cy='68' r='2.8' fill='%23111827'/%3E%3Ccircle cx='22' cy='14' r='4' fill='%23C4B5FD'/%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <!-- ── CSS modular ──────────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="container navbar__inner">
+
+    <!-- Logo -->
+    <a href="#" class="navbar__logo" aria-label="Bescheiben Digital Agency — início">
+      <!--
+        Signal Nexus — símbolo da Bescheiben
+        Estrutura: linha vertical + dois bumps do "B" + nó de energia
+        Gradiente: lilás (#C4B5FD) → roxo profundo (#4A32D4)
+      -->
+      <svg width="30" height="30" viewBox="0 0 80 80" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Gradiente topo → base: lilás claro para roxo -->
+          <linearGradient id="b-top" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#C4B5FD"/>
+            <stop offset="100%" stop-color="#6B4EFF"/>
+          </linearGradient>
+          <!-- Gradiente secundário: roxo → roxo escuro (bump inferior) -->
+          <linearGradient id="b-bot" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#6B4EFF"/>
+            <stop offset="100%" stop-color="#4A32D4" stop-opacity="0.7"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Espinha vertical do "B" -->
+        <line
+          x1="22" y1="14" x2="22" y2="68"
+          stroke="url(#b-top)"
+          stroke-width="5"
+          stroke-linecap="round"
+        />
+
+        <!-- Bump superior (menor, mais fechado) -->
+        <path
+          d="M22 14 L56 14 Q68 14 68 26 Q68 38 56 38 L22 38"
+          stroke="url(#b-top)"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+        />
+
+        <!-- Bump inferior (maior, mais aberto — fiel ao ícone) -->
+        <path
+          d="M22 38 L58 38 Q72 38 72 51 Q72 64 58 64 L22 64"
+          stroke="url(#b-bot)"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+        />
+
+        <!-- Nó inferior — anel de energia (roxo sólido + buraco escuro) -->
+        <circle cx="22" cy="68" r="6"   fill="#6B4EFF"/>
+        <circle cx="22" cy="68" r="2.8" fill="#0C0C18"/>
+
+        <!-- Nó superior — ponto de entrada do sinal -->
+        <circle cx="22" cy="14" r="4" fill="#C4B5FD"/>
+      </svg>
+
+      <div class="logo-wordmark">
+        <span class="logo-name">Bescheiben</span>
+        <span class="logo-sub">Digital Agency</span>
+      </div>
+    </a>
+
+    <!-- Nav links (desktop) -->
+    <nav class="navbar__links" aria-label="Navegação principal">
+      <a href="#servicos" class="nav-link">Serviços</a>
+      <a href="#processo" class="nav-link">Processo</a>
+      <a href="#sobre"    class="nav-link">Sobre</a>
+      <a href="#contato"  class="nav-link">Contato</a>
+    </nav>
+
+    <!-- CTA (desktop) -->
+    <div class="navbar__cta">
+      <a href="#contato" class="btn btn--primary">
+        Falar com especialista
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      class="navbar__hamburger"
+      id="hamburger"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /navbar__inner -->
+
+  <!-- Menu mobile -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="#servicos" class="mobile-link">Serviços</a>
+    <a href="#processo" class="mobile-link">Processo</a>
+    <a href="#sobre"    class="mobile-link">Sobre</a>
+    <a href="#contato"  class="mobile-link">Contato</a>
+    <a href="#contato"  class="btn btn--primary btn--full" style="margin-top:14px">Falar com especialista</a>
+  </nav>
+</header>
+
+
+<main>
+
+<!-- ════════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-labelledby="hero-headline">
+
+  <!-- Efeitos de fundo -->
+  <div class="hero__mesh"  aria-hidden="true"></div>
+  <div class="hero__grid"  aria-hidden="true"></div>
+  <div class="hero__lines" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+
+    <!-- Copy -->
+    <div class="hero__copy">
+      <div class="badge badge--dark reveal" style="margin-bottom:1.75rem">
+        <span class="badge__dot"></span>
+        Bescheiben Digital Agency
+      </div>
+
+      <h1 id="hero-headline" class="hero__headline reveal delay-1">
+        Marketing digital<br>estruturado para
+        <span class="text-grad-light"><br>ajudar sua empresa<br>a crescer.</span>
+      </h1>
+
+      <p class="hero__subtitle reveal delay-2">
+        Criamos sites profissionais, estratégias digitais e sistemas de geração de leads
+        para empresas que querem estruturar sua presença online e transformar marketing
+        em crescimento real.
+      </p>
+
+      <div class="hero__actions reveal delay-3">
+        <a href="#contato" class="btn btn--primary btn--lg">
+          Agendar diagnóstico
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#servicos" class="btn btn--ghost btn--lg">Conhecer serviços</a>
+      </div>
+    </div><!-- /hero__copy -->
+
+    <!-- Visual (card animado) -->
+    <div class="hero__visual-wrap reveal-right delay-2" aria-hidden="true">
+      <div class="hero__visual">
+        <div class="hero-card">
+
+          <!-- Header tipo browser -->
+          <div class="hero-card__header">
+            <div class="hero-card__dot" style="background:#FF5F57"></div>
+            <div class="hero-card__dot" style="background:#FEBC2E"></div>
+            <div class="hero-card__dot" style="background:#28C840"></div>
+            <div class="hero-card__url">bescheiben.com.br — dashboard</div>
+            <div class="hero-card__status">
+              <span class="status-dot"></span>Ativo
+            </div>
+          </div>
+
+          <!-- Métricas -->
+          <div class="hero-metrics">
+            <div class="metric">
+              <div class="metric__val">↑</div>
+              <div class="metric__label">Site ativo</div>
+            </div>
+            <div class="metric">
+              <div class="metric__val grad">On</div>
+              <div class="metric__label">Estratégia</div>
+            </div>
+            <div class="metric">
+              <div class="metric__val">✓</div>
+              <div class="metric__label">Leads</div>
+            </div>
+          </div>
+
+          <!-- Lista de serviços -->
+          <div class="hero-services">
+            <div class="hero-service">
+              <div class="hero-service__icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero-service__name">Site profissional</div>
+                <div class="hero-service__tag">Alta conversão · SEO · Performance</div>
+              </div>
+              <span class="hero-service__arrow">›</span>
+            </div>
+
+            <div class="hero-service">
+              <div class="hero-service__icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero-service__name">Estratégia digital</div>
+                <div class="hero-service__tag">Planejamento · Metas · Execução</div>
+              </div>
+              <span class="hero-service__arrow">›</span>
+            </div>
+
+            <div class="hero-service">
+              <div class="hero-service__icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero-service__name">Geração de leads</div>
+                <div class="hero-service__tag">Funil · Automação · Conversão</div>
+              </div>
+              <span class="hero-service__arrow">›</span>
+            </div>
+
+            <div class="hero-service">
+              <div class="hero-service__icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero-service__name">Branding</div>
+                <div class="hero-service__tag">Identidade · Posicionamento · Design</div>
+              </div>
+              <span class="hero-service__arrow">›</span>
+            </div>
+          </div><!-- /hero-services -->
+
+        </div><!-- /hero-card -->
+
+        <!-- Badges flutuantes decorativas -->
+        <div class="float-badge float-badge--1">
+          <span class="float-badge__dot"></span>
+          Presença digital ativa
+        </div>
+        <div class="float-badge float-badge--2">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#A58BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+          Estratégia em execução
+        </div>
+
+      </div><!-- /hero__visual -->
+    </div><!-- /hero__visual-wrap -->
+
+  </div><!-- /hero__inner -->
+
+  <!-- Indicador de scroll -->
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint__text">scroll</div>
+    <div class="scroll-hint__line"></div>
+  </div>
+
+</section><!-- /hero -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     O DESAFIO
+════════════════════════════════════════════════════════════ -->
+<section class="section" id="problema" aria-labelledby="problema-title">
+  <div class="container">
+
+    <p class="section__label reveal">O desafio</p>
+    <h2 id="problema-title" class="section__title reveal">
+      A maioria das empresas ainda não tem<br>
+      <span class="text-grad">marketing digital estruturado.</span>
+    </h2>
+    <p class="section__desc reveal">
+      Ter um site ou perfil nas redes sociais não é suficiente.
+      Sem estratégia, as ações digitais não geram resultado.
+    </p>
+
+    <div class="problem-grid">
+
+      <article class="problem-card reveal" style="transition-delay:0s">
+        <div class="problem-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3 class="problem-card__title">Site sem resultados</h3>
+        <p class="problem-card__desc">
+          Muitas empresas têm sites que não foram projetados para converter visitantes
+          em clientes. Apenas exibem informações, sem uma estratégia clara de ação.
+        </p>
+      </article>
+
+      <article class="problem-card reveal" style="transition-delay:0.1s">
+        <div class="problem-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        <h3 class="problem-card__title">Presença digital desorganizada</h3>
+        <p class="problem-card__desc">
+          Redes sociais sem frequência, identidade visual inconsistente e comunicação sem
+          direção. A empresa existe online mas não é percebida como referência.
+        </p>
+      </article>
+
+      <article class="problem-card reveal" style="transition-delay:0.2s">
+        <div class="problem-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3 class="problem-card__title">Marketing sem estratégia</h3>
+        <p class="problem-card__desc">
+          Ações isoladas, sem planejamento ou mensuração. Recursos investidos em marketing
+          digital que não geram retorno visível para o negócio.
+        </p>
+      </article>
+
+      <article class="problem-card reveal" style="transition-delay:0.3s">
+        <div class="problem-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3 class="problem-card__title">Dificuldade em gerar leads</h3>
+        <p class="problem-card__desc">
+          Sem um processo estruturado para captar e qualificar contatos, a empresa depende
+          de indicações e oportunidades que aparecem por acaso.
+        </p>
+      </article>
+
+    </div><!-- /problem-grid -->
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SOLUÇÃO
+════════════════════════════════════════════════════════════ -->
+<section class="section section--dark" id="solucao" aria-labelledby="solucao-title">
+  <div class="section__blob" style="width:600px;height:500px;background:radial-gradient(circle,rgba(107,78,255,.14),transparent 70%);top:-140px;right:-120px" aria-hidden="true"></div>
+
+  <div class="container solution__inner">
+
+    <div class="solution__copy">
+      <p class="section__label section__label--light reveal">Como ajudamos</p>
+      <h2 id="solucao-title" class="section__title section__title--light reveal">
+        Transformamos marketing digital em um sistema estruturado.
+      </h2>
+      <p class="section__desc section__desc--light reveal">
+        Trabalhamos com empresas que querem estruturar sua presença digital. Nosso trabalho
+        combina estratégia, tecnologia e design para criar sistemas que apoiam o crescimento
+        do negócio.
+      </p>
+      <a href="#contato" class="btn btn--primary btn--lg reveal" style="margin-top:0">
+        Agendar diagnóstico gratuito
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="value-list reveal-right">
+      <div class="value-item">
+        <div class="value-item__icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div>
+          <p class="value-item__title">Estratégia antes de execução</p>
+          <p class="value-item__desc">Toda ação começa com diagnóstico e planejamento. Nada é feito sem propósito claro.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-item__icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <div>
+          <p class="value-item__title">Tecnologia a serviço do negócio</p>
+          <p class="value-item__desc">Sites rápidos, automações e integrações que trabalham para gerar resultados continuamente.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-item__icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="value-item__title">Design que comunica e converte</p>
+          <p class="value-item__desc">Identidade visual e interfaces projetadas para transmitir credibilidade e gerar confiança.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-item__icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 20V10M12 20V4M6 20v-6"/>
+          </svg>
+        </div>
+        <div>
+          <p class="value-item__title">Melhoria contínua</p>
+          <p class="value-item__desc">Monitoramos e ajustamos cada ação para garantir que o sistema evolui com o negócio.</p>
+        </div>
+      </div>
+    </div><!-- /value-list -->
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SERVIÇOS
+════════════════════════════════════════════════════════════ -->
+<section class="section section--bg" id="servicos" aria-labelledby="servicos-title">
+  <div class="container">
+
+    <div class="services-header">
+      <div>
+        <p class="section__label reveal">Serviços</p>
+        <h2 id="servicos-title" class="section__title reveal" style="margin-bottom:0">
+          O que fazemos pela sua empresa
+        </h2>
+      </div>
+      <p class="section__desc reveal" style="margin-bottom:0;align-self:end">
+        Seis áreas integradas que constroem uma presença digital sólida
+        e geram oportunidades reais de negócio.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal" style="transition-delay:0s">
+        <span class="service-card__num">01</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Criação de sites</h3>
+        <p class="service-card__desc">Desenvolvemos sites profissionais, rápidos e otimizados para converter visitantes em clientes.</p>
+        <div class="service-card__tags">
+          <span class="service-tag">Design</span>
+          <span class="service-tag">SEO</span>
+          <span class="service-tag">Performance</span>
+        </div>
+      </article>
+
+      <article class="service-card service-card--featured reveal" style="transition-delay:0.1s">
+        <span class="service-card__num">02</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Estratégia digital</h3>
+        <p class="service-card__desc">Planejamento completo da presença digital com metas claras e ações direcionadas a resultado.</p>
+        <div class="service-card__tags">
+          <span class="service-tag">Diagnóstico</span>
+          <span class="service-tag">Planejamento</span>
+          <span class="service-tag">KPIs</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal" style="transition-delay:0.2s">
+        <span class="service-card__num">03</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Gestão de redes sociais</h3>
+        <p class="service-card__desc">Gerenciamento profissional das redes sociais com consistência, relevância e análise de performance.</p>
+        <div class="service-card__tags">
+          <span class="service-tag">Conteúdo</span>
+          <span class="service-tag">Calendário</span>
+          <span class="service-tag">Analytics</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal" style="transition-delay:0.1s">
+        <span class="service-card__num">04</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Branding</h3>
+        <p class="service-card__desc">Criação e fortalecimento da identidade visual e posicionamento da sua marca no mercado digital.</p>
+        <div class="service-card__tags">
+          <span class="service-tag">Identidade</span>
+          <span class="service-tag">Posicionamento</span>
+          <span class="service-tag">Manual</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal" style="transition-delay:0.2s">
+        <span class="service-card__num">05</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Automação de marketing</h3>
+        <p class="service-card__desc">Fluxos automáticos que nutrem leads e mantêm sua empresa presente no momento certo, sem esforço manual.</p>
+        <div class="service-card__tags">
+          <span class="service-tag">Fluxos</span>
+          <span class="service-tag">CRM</span>
+          <span class="service-tag">E-mail</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal" style="transition-delay:0.3s">
+        <span class="service-card__num">06</span>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Geração de leads</h3>
+        <p class="service-card__desc">Sistemas para atrair, captar e qualificar contatos interessados nos produtos ou serviços da sua empresa.</p>
+        <div class="service-card__tags">
+          <span class="service-tag">Captação</span>
+          <span class="service-tag">Landing pages</span>
+          <span class="service-tag">Campanhas</span>
+        </div>
+      </article>
+
+    </div><!-- /services-grid -->
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PROCESSO
+════════════════════════════════════════════════════════════ -->
+<section class="section" id="processo" aria-labelledby="processo-title">
+  <div class="container">
+
+    <p class="section__label reveal">Como trabalhamos</p>
+    <h2 id="processo-title" class="section__title reveal">
+      Quatro etapas para estruturar seu marketing digital
+    </h2>
+    <p class="section__desc reveal">
+      Um processo claro e estruturado que garante que cada ação esteja alinhada
+      com os objetivos da sua empresa.
+    </p>
+
+    <div class="process-steps">
+
+      <article class="step-card reveal" style="transition-delay:0s">
+        <span class="step-card__num">01</span>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Diagnóstico</h3>
+        <p class="step-card__desc">Analisamos a situação atual da sua empresa: site, redes sociais, estratégia e presença digital como um todo.</p>
+      </article>
+
+      <article class="step-card reveal" style="transition-delay:0.1s">
+        <span class="step-card__num">02</span>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Planejamento</h3>
+        <p class="step-card__desc">Definimos metas, canais, estratégias e um plano de ação com cronograma e responsabilidades claras.</p>
+      </article>
+
+      <article class="step-card reveal" style="transition-delay:0.2s">
+        <span class="step-card__num">03</span>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Implementação</h3>
+        <p class="step-card__desc">Executamos tudo conforme o planejado: site, automações, conteúdo, campanhas e identidade visual.</p>
+      </article>
+
+      <article class="step-card reveal" style="transition-delay:0.3s">
+        <span class="step-card__num">04</span>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3 class="step-card__title">Otimização</h3>
+        <p class="step-card__desc">Monitoramos resultados, identificamos oportunidades de melhoria e ajustamos a estratégia continuamente.</p>
+      </article>
+
+    </div><!-- /process-steps -->
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SOBRE
+════════════════════════════════════════════════════════════ -->
+<section class="section section--dark-2" id="sobre" aria-labelledby="sobre-title">
+  <div class="section__blob" style="width:500px;height:500px;background:radial-gradient(circle,rgba(107,78,255,.12),transparent 70%);bottom:-120px;left:-80px" aria-hidden="true"></div>
+
+  <div class="container about__inner">
+
+    <div class="about__copy">
+      <p class="section__label section__label--light reveal">Sobre a agência</p>
+      <h2 id="sobre-title" class="section__title section__title--light reveal">
+        Bescheiben<br>Digital Agency
+      </h2>
+      <p class="section__desc section__desc--light reveal">
+        Somos uma agência de marketing digital focada em ajudar empresas a estruturar
+        sua presença online de forma estratégica e eficiente.
+      </p>
+      <p style="font-size:0.9375rem;color:rgba(255,255,255,.38);line-height:1.78;margin-bottom:2.5rem" class="reveal delay-1">
+        Nosso trabalho combina estratégia, tecnologia e design para criar sistemas digitais
+        que apoiam o crescimento das empresas. Atuamos com pequenas e médias empresas,
+        negócios B2B e organizações que precisam estruturar seu marketing digital e começar
+        a gerar leads de forma consistente.
+      </p>
+      <a href="#contato" class="btn btn--primary btn--lg reveal delay-2">
+        Falar com a equipe
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="about__visual reveal-right">
+      <div class="about-card">
+        <p class="about-card__label">Bescheiben · Pilares do trabalho</p>
+        <div class="about-pillars">
+
+          <div class="about-pillar">
+            <div class="about-pillar__icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="about-pillar__name">Comunicação clara e honesta</span>
+            <span class="about-pillar__arrow" aria-hidden="true">›</span>
+          </div>
+
+          <div class="about-pillar">
+            <div class="about-pillar__icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="about-pillar__name">Foco em resultados reais</span>
+            <span class="about-pillar__arrow" aria-hidden="true">›</span>
+          </div>
+
+          <div class="about-pillar">
+            <div class="about-pillar__icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83m9.9 9.9 2.83 2.83"/></svg>
+            </div>
+            <span class="about-pillar__name">Parceria de longo prazo</span>
+            <span class="about-pillar__arrow" aria-hidden="true">›</span>
+          </div>
+
+          <div class="about-pillar">
+            <div class="about-pillar__icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <span class="about-pillar__name">Estratégia orientada a dados</span>
+            <span class="about-pillar__arrow" aria-hidden="true">›</span>
+          </div>
+
+          <div class="about-pillar">
+            <div class="about-pillar__icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <span class="about-pillar__name">Tecnologia de vanguarda</span>
+            <span class="about-pillar__arrow" aria-hidden="true">›</span>
+          </div>
+
+        </div><!-- /about-pillars -->
+      </div><!-- /about-card -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CTA
+════════════════════════════════════════════════════════════ -->
+<section class="cta-section" id="cta" aria-labelledby="cta-title">
+  <div class="section__blob" style="width:600px;height:500px;background:radial-gradient(circle,rgba(107,78,255,.20),transparent 70%);top:-150px;left:50%;transform:translateX(-50%)" aria-hidden="true"></div>
+  <div class="section__blob" style="width:300px;height:300px;background:radial-gradient(circle,rgba(165,139,255,.12),transparent 70%);bottom:-80px;right:10%" aria-hidden="true"></div>
+
+  <div class="container" style="position:relative;z-index:2">
+    <div class="badge badge--light reveal" style="margin-bottom:1.75rem;display:inline-flex">
+      <span class="badge__dot"></span>
+      Diagnóstico gratuito
+    </div>
+
+    <h2 id="cta-title" class="cta-section__headline reveal">
+      Vamos estruturar seu<br>
+      <span class="text-grad-light">marketing digital.</span>
+    </h2>
+
+    <p class="cta-section__desc reveal">
+      Se sua empresa precisa de um site profissional e de uma estratégia digital clara,
+      podemos ajudar. Agende uma conversa e descubra como estruturar sua presença online.
+    </p>
+
+    <div class="reveal">
+      <a href="#contato" class="btn btn--white btn--lg">
+        Agendar conversa
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="trust-row reveal">
+      <span class="trust-item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 6 9 17l-5-5" stroke="#A58BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Diagnóstico gratuito
+      </span>
+      <span class="trust-item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 6 9 17l-5-5" stroke="#A58BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Sem compromisso
+      </span>
+      <span class="trust-item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 6 9 17l-5-5" stroke="#A58BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Resposta em até 24h
+      </span>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CONTATO
+════════════════════════════════════════════════════════════ -->
+<section class="section section--dark" id="contato" aria-labelledby="contato-title">
+  <div class="section__blob" style="width:480px;height:480px;background:radial-gradient(circle,rgba(107,78,255,.12),transparent 70%);top:-100px;right:-60px" aria-hidden="true"></div>
+
+  <div class="container contact__inner">
+
+    <!-- Info -->
+    <div class="contact__info">
+      <p class="section__label section__label--light reveal">Contato</p>
+      <h2 id="contato-title" class="section__title section__title--light reveal">
+        Fale com a Bescheiben
+      </h2>
+      <p class="section__desc section__desc--light reveal">
+        Preencha o formulário e entraremos em contato para entender sua situação
+        e apresentar como podemos ajudar.
+      </p>
+
+      <div class="contact__channels reveal">
+        <a href="mailto:bescheiben@gmail.com" class="contact__channel">
+          <div class="contact__channel-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact__channel-label">Email</p>
+            <p class="contact__channel-value">bescheiben@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/bescheiben?igsh=M3lsMHFteDVhcjVz" target="_blank" rel="noopener noreferrer" class="contact__channel">
+          <div class="contact__channel-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact__channel-label">Instagram</p>
+            <p class="contact__channel-value">@bescheiben</p>
+          </div>
+        </a>
+      </div>
+    </div><!-- /contact__info -->
+
+    <!-- Formulário -->
+    <div class="reveal-right">
+      <form class="contact-form" id="contact-form" novalidate aria-label="Formulário de contato">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-nome">Nome *</label>
+            <input type="text"  id="f-nome"     name="nome"     class="form-input"    placeholder="Seu nome"        autocomplete="name"         required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">Email *</label>
+            <input type="email" id="f-email"    name="email"    class="form-input"    placeholder="seu@email.com"   autocomplete="email"        required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-empresa">Empresa *</label>
+          <input type="text" id="f-empresa" name="empresa" class="form-input" placeholder="Nome da empresa" autocomplete="organization" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-mensagem">Mensagem *</label>
+          <textarea id="f-mensagem" name="mensagem" class="form-textarea" placeholder="Conte um pouco sobre sua empresa e o que você precisa…" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--full" id="form-btn">
+          <span id="form-btn-text">Enviar mensagem</span>
+          <svg id="form-btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg id="form-btn-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="display:none;animation:spin 0.8s linear infinite">
+            <path d="M12 2a10 10 0 0 1 10 10"/>
+          </svg>
+        </button>
+
+        <div id="form-message" class="form-msg" role="alert" aria-live="polite"></div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</main><!-- /main -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <!-- Brand -->
+    <div class="footer__brand">
+      <a href="#" class="footer__logo" aria-label="Bescheiben Digital Agency — início">
+        <svg width="24" height="24" viewBox="0 0 80 80" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="f-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C4B5FD"/><stop offset="100%" stop-color="#6B4EFF"/></linearGradient>
+            <linearGradient id="f-bot" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6B4EFF"/><stop offset="100%" stop-color="#4A32D4" stop-opacity=".7"/></linearGradient>
+          </defs>
+          <line x1="22" y1="14" x2="22" y2="68" stroke="url(#f-top)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M22 14 L56 14 Q68 14 68 26 Q68 38 56 38 L22 38" stroke="url(#f-top)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M22 38 L58 38 Q72 38 72 51 Q72 64 58 64 L22 64" stroke="url(#f-bot)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="22" cy="68" r="6"   fill="#6B4EFF"/>
+          <circle cx="22" cy="68" r="2.8" fill="#0C0C18"/>
+          <circle cx="22" cy="14" r="4"   fill="#C4B5FD"/>
+        </svg>
+        <span class="footer__logo-name">Bescheiben</span>
+      </a>
+      <p class="footer__tagline">Marketing digital estruturado para empresas que querem crescer.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/bescheiben?igsh=M3lsMHFteDVhcjVz" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram da Bescheiben">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="mailto:bescheiben@gmail.com" class="footer__social-link" aria-label="Email da Bescheiben">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Serviços">
+      <h3 class="footer__col-title">Serviços</h3>
+      <ul>
+        <li><a href="#servicos">Criação de sites</a></li>
+        <li><a href="#servicos">Estratégia digital</a></li>
+        <li><a href="#servicos">Redes sociais</a></li>
+        <li><a href="#servicos">Branding</a></li>
+        <li><a href="#servicos">Automação</a></li>
+        <li><a href="#servicos">Geração de leads</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__col" aria-label="Empresa">
+      <h3 class="footer__col-title">Empresa</h3>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__col" aria-label="Contato">
+      <h3 class="footer__col-title">Contato</h3>
+      <ul>
+        <li><a href="mailto:bescheiben@gmail.com">bescheiben@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/bescheiben?igsh=M3lsMHFteDVhcjVz" target="_blank" rel="noopener noreferrer">@bescheiben</a></li>
+        <li><a href="#contato">Diagnóstico gratuito</a></li>
+      </ul>
+    </nav>
+
+  </div><!-- /footer__inner -->
+
+  <div class="footer__bottom">
+    <div class="footer__bottom-inner">
+      <span>© 2025 Bescheiben Digital Agency. Todos os direitos reservados.</span>
+      <span class="footer__mono">Signal Nexus · v4.0</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     INSTAGRAM — Botão flutuante
+════════════════════════════════════════════════════════════ -->
+<a
+  href="https://www.instagram.com/bescheiben?igsh=M3lsMHFteDVhcjVz"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="btn-instagram"
+  aria-label="Seguir a Bescheiben no Instagram"
+>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+  </svg>
+</a>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SCRIPTS — defer para não bloquear renderização
+════════════════════════════════════════════════════════════ -->
+<script src="js/main.js"       defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/form.js"       defer></script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════════════════════════════
+   variables.css — Design tokens da Bescheiben Digital Agency
+   Fonte única de verdade para todas as propriedades visuais.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── CORES DE MARCA ─────────────────────────────────────────── */
+  --c-purple:       #6B4EFF;
+  --c-purple-deep:  #4A32D4;
+  --c-purple-light: #A58BFF;
+  --c-purple-pale:  #C4B5FD;
+  --c-purple-ghost: #EDE9FF;
+
+  /* ── TEXTO ──────────────────────────────────────────────────── */
+  --c-ink:          #111827;
+  --c-ink-2:        #1F2937;
+  --c-gray:         #6B7280;
+  --c-gray-light:   #9CA3AF;
+  --c-gray-border:  #E5E7EB;
+
+  /* ── SUPERFÍCIES ────────────────────────────────────────────── */
+  --c-white:        #FFFFFF;
+  --c-bg:           #F9FAFB;
+  --c-dark:         #0C0C18;
+  --c-dark-2:       #0F0F20;
+  --c-dark-3:       #161628;
+  --c-dark-4:       #1C1C34;
+
+  /* ── GRADIENTES ─────────────────────────────────────────────── */
+  --g-primary:      linear-gradient(135deg, #6B4EFF 0%, #8B6CFF 100%);
+  --g-deep:         linear-gradient(135deg, #4A32D4 0%, #6B4EFF 100%);
+  --g-dark:         linear-gradient(160deg, #0C0C18 0%, #141426 60%, #0C0C18 100%);
+  --g-text:         linear-gradient(135deg, #A58BFF, #6B4EFF);
+  --g-text-light:   linear-gradient(135deg, #C4B5FD, #A58BFF);
+
+  /* ── SOMBRAS ────────────────────────────────────────────────── */
+  --s-sm:           0 1px 3px rgba(0, 0, 0, 0.08);
+  --s-md:           0 4px 20px rgba(0, 0, 0, 0.10);
+  --s-lg:           0 12px 48px rgba(0, 0, 0, 0.12);
+  --s-glow:         0 8px 32px rgba(107, 78, 255, 0.28);
+  --s-glow-lg:      0 16px 56px rgba(107, 78, 255, 0.40);
+
+  /* ── BORDER RADIUS ──────────────────────────────────────────── */
+  --r-xs:           4px;
+  --r-sm:           6px;
+  --r-md:           12px;
+  --r-lg:           20px;
+  --r-xl:           28px;
+  --r-2xl:          36px;
+  --r-full:         9999px;
+
+  /* ── TRANSIÇÕES ─────────────────────────────────────────────── */
+  --t-fast:         0.15s ease;
+  --t-base:         0.25s ease;
+  --t-slow:         0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ── LAYOUT ─────────────────────────────────────────────────── */
+  --max-w:          1180px;
+  --nav-h:          68px;
+
+  /* ── ESPAÇAMENTO (base 8px) ─────────────────────────────────── */
+  --sp-1:  0.5rem;
+  --sp-2:  1rem;
+  --sp-3:  1.5rem;
+  --sp-4:  2rem;
+  --sp-5:  3rem;
+  --sp-6:  4rem;
+  --sp-7:  6rem;
+}

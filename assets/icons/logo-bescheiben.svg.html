@@ -1,0 +1,231 @@
+<!--
+  ══════════════════════════════════════════════════════
+  BESCHEIBEN — Signal Nexus Logo
+  Todas as variantes prontas para uso
+  ══════════════════════════════════════════════════════
+-->
+
+
+<!-- ─────────────────────────────────────────────────
+  1. FAVICON INLINE (colar no <head> do index.html)
+  Substitui qualquer <link rel="icon"> externo.
+  Funciona em todos os browsers modernos.
+───────────────────────────────────────────────────── -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23A58BFF'/%3E%3Cstop offset='100%25' stop-color='%234A32D4'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%236B4EFF'/%3E%3Cstop offset='100%25' stop-color='%234A32D4' stop-opacity='.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='80' height='80' rx='16' fill='%230C0C18'/%3E%3Cline x1='22' y1='14' x2='22' y2='66' stroke='url(%23a)' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M22 18 Q22 38 42 38 Q58 38 58 29 Q58 18 42 18 L22 18' stroke='url(%23a)' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3Cpath d='M22 38 Q22 66 42 66 Q62 66 62 54 Q62 38 42 38 L22 38' stroke='url(%23b)' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='22' cy='66' r='5' fill='%236B4EFF'/%3E%3Ccircle cx='22' cy='66' r='2.2' fill='%230C0C18'/%3E%3Ccircle cx='22' cy='14' r='3.5' fill='%23A58BFF'/%3E%3Ccircle cx='22' cy='38' r='2' fill='%236B4EFF' opacity='.6'/%3E%3C/svg%3E" type="image/svg+xml">
+
+
+<!-- ─────────────────────────────────────────────────
+  2. SÍMBOLO SVG STANDALONE (arquivo: assets/icons/logo-symbol.svg)
+  Use este arquivo como <img src="..."> ou embutido no HTML.
+───────────────────────────────────────────────────── -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#A58BFF"/>
+      <stop offset="100%" stop-color="#4A32D4"/>
+    </linearGradient>
+    <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#6B4EFF"/>
+      <stop offset="100%" stop-color="#4A32D4" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo escuro com cantos arredondados (app icon / favicon) -->
+  <rect width="80" height="80" rx="16" fill="#0C0C18"/>
+
+  <!-- Linha vertical — espinha do "B" -->
+  <line
+    x1="22" y1="14" x2="22" y2="66"
+    stroke="url(#lg1)"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <!-- Bump superior do "B" -->
+  <path
+    d="M22 18 Q22 38 42 38 Q58 38 58 29 Q58 18 42 18 L22 18"
+    stroke="url(#lg1)"
+    stroke-width="4"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Bump inferior do "B" — mais amplo, mais escuro -->
+  <path
+    d="M22 38 Q22 66 42 66 Q62 66 62 54 Q62 38 42 38 L22 38"
+    stroke="url(#lg2)"
+    stroke-width="4"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Nó inferior — ponto de energia / nexus -->
+  <circle cx="22" cy="66" r="5"   fill="#6B4EFF"/>
+  <circle cx="22" cy="66" r="2.2" fill="#0C0C18"/>
+
+  <!-- Nó superior — ponto de entrada do sinal -->
+  <circle cx="22" cy="14" r="3.5" fill="#A58BFF"/>
+
+  <!-- Nó central — interseção do nexus -->
+  <circle cx="22" cy="38" r="2" fill="#6B4EFF" opacity="0.6"/>
+</svg>
+
+
+<!-- ─────────────────────────────────────────────────
+  3. LOGO COM WORDMARK — para usar no <header> navbar
+  Copie o bloco <a class="navbar__logo"> abaixo
+  e substitua o que está no index.html atual.
+───────────────────────────────────────────────────── -->
+
+<a href="#" class="navbar__logo" aria-label="Bescheiben Digital Agency — início">
+
+  <!-- Símbolo SVG inline (sem fundo — contexto da navbar já é escuro) -->
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 80 80"
+    fill="none"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="nav-g1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#A58BFF"/>
+        <stop offset="100%" stop-color="#4A32D4"/>
+      </linearGradient>
+      <linearGradient id="nav-g2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#6B4EFF"/>
+        <stop offset="100%" stop-color="#4A32D4" stop-opacity="0.5"/>
+      </linearGradient>
+    </defs>
+
+    <line
+      x1="22" y1="14" x2="22" y2="66"
+      stroke="url(#nav-g1)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M22 18 Q22 38 42 38 Q58 38 58 29 Q58 18 42 18 L22 18"
+      stroke="url(#nav-g1)"
+      stroke-width="4"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <path
+      d="M22 38 Q22 66 42 66 Q62 66 62 54 Q62 38 42 38 L22 38"
+      stroke="url(#nav-g2)"
+      stroke-width="4"
+      stroke-linecap="round"
+      fill="none"
+    />
+
+    <!-- Nó inferior -->
+    <circle cx="22" cy="66" r="5"   fill="#6B4EFF"/>
+    <circle cx="22" cy="66" r="2.2" fill="#0C0C18"/>
+
+    <!-- Nó superior -->
+    <circle cx="22" cy="14" r="3.5" fill="#A58BFF"/>
+
+    <!-- Nexus central -->
+    <circle cx="22" cy="38" r="2" fill="#6B4EFF" opacity="0.6"/>
+  </svg>
+
+  <!-- Wordmark -->
+  <div class="logo-wordmark">
+    <span class="logo-name">Bescheiben</span>
+    <span class="logo-sub">Digital Agency</span>
+  </div>
+
+</a>
+
+
+<!-- ─────────────────────────────────────────────────
+  4. VERSÃO GRANDE — para usar em splash screen ou loading
+  (tamanho: 80×80, com fundo arredondado)
+───────────────────────────────────────────────────── -->
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 80 80"
+  width="80"
+  height="80"
+  aria-label="Bescheiben Digital Agency"
+  role="img"
+>
+  <title>Bescheiben Digital Agency</title>
+  <defs>
+    <linearGradient id="splash-g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#A58BFF"/>
+      <stop offset="100%" stop-color="#4A32D4"/>
+    </linearGradient>
+    <linearGradient id="splash-g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#6B4EFF"/>
+      <stop offset="100%" stop-color="#4A32D4" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="80" height="80" rx="16" fill="#0C0C18"/>
+  <!-- Borda sutil roxa -->
+  <rect width="80" height="80" rx="16" fill="none"
+        stroke="rgba(107,78,255,0.30)" stroke-width="1"/>
+
+  <!-- Símbolo -->
+  <line x1="22" y1="14" x2="22" y2="66"
+        stroke="url(#splash-g1)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 18 Q22 38 42 38 Q58 38 58 29 Q58 18 42 18 L22 18"
+        stroke="url(#splash-g1)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M22 38 Q22 66 42 66 Q62 66 62 54 Q62 38 42 38 L22 38"
+        stroke="url(#splash-g2)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="22" cy="66" r="5"   fill="#6B4EFF"/>
+  <circle cx="22" cy="66" r="2.2" fill="#0C0C18"/>
+  <circle cx="22" cy="14" r="3.5" fill="#A58BFF"/>
+  <circle cx="22" cy="38" r="2"   fill="#6B4EFF" opacity="0.6"/>
+</svg>
+
+
+<!-- ─────────────────────────────────────────────────
+  5. CSS DO LOGO (colar no variables.css ou components.css)
+───────────────────────────────────────────────────── -->
+
+<style>
+/* Logo na navbar */
+.navbar__logo {
+  display:     flex;
+  align-items: center;
+  gap:         10px;
+  text-decoration: none;
+}
+
+.logo-wordmark {
+  display:        flex;
+  flex-direction: column;
+  line-height:    1;
+}
+
+.logo-name {
+  font-family:    'Sora', system-ui, sans-serif;
+  font-size:      1.05rem;
+  font-weight:    700;
+  color:          #FFFFFF;
+  letter-spacing: -0.025em;
+}
+
+.logo-sub {
+  font-family:    'DM Mono', monospace;
+  font-size:      0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          rgba(255, 255, 255, 0.32);
+  margin-top:     3px;
+}
+
+/* Hover sutil no logo */
+.navbar__logo:hover .logo-name {
+  opacity: 0.88;
+  transition: opacity 0.15s ease;
+}
+</style>

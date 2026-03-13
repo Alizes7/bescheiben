@@ -1,0 +1,128 @@
+/* ═══════════════════════════════════════════════════════════════
+   typography.css — Sistema tipográfico da Bescheiben
+   Fonte: Sora (Google Fonts) — moderna, geométrica, SaaS-grade
+   ═══════════════════════════════════════════════════════════════
+
+   Hierarquia:
+     Display / Hero  → Sora 700–800
+     H2 Seção        → Sora 700
+     H3 Card         → Sora 600
+     Body            → Sora 400
+     Caption / Label → Sora 400–500 (uppercase + tracking)
+     Código / Mono   → JetBrains Mono 400–500
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Famílias via CSS variables ─────────────────────────────── */
+:root {
+  --font-display: 'Sora', sans-serif;   /* Títulos e UI de destaque */
+  --font-body:    'Sora', sans-serif;   /* Corpo e interfaces       */
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace; /* Labels técnicos */
+}
+
+/* ── Escala tipográfica ─────────────────────────────────────── */
+:root {
+  /* Tamanhos */
+  --fs-xs:   0.6875rem;   /* 11px — caption, label mono */
+  --fs-sm:   0.8125rem;   /* 13px — small UI text        */
+  --fs-base: 0.9375rem;   /* 15px — body padrão          */
+  --fs-md:   1.0625rem;   /* 17px — body lead            */
+  --fs-lg:   1.125rem;    /* 18px — card title           */
+  --fs-xl:   1.375rem;    /* 22px — H3 interno           */
+  --fs-2xl:  1.75rem;     /* 28px — H2 pequeno           */
+  --fs-3xl:  2rem;        /* 32px — H2 seção             */
+  --fs-4xl:  2.75rem;     /* 44px — H1 seção             */
+  --fs-hero: clamp(2.5rem, 4.8vw, 3.75rem); /* Hero display */
+
+  /* Pesos */
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-extrabold: 800;
+
+  /* Line heights */
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.72;
+  --lh-loose:   1.85;
+
+  /* Letter spacing */
+  --ls-tight:  -0.04em;
+  --ls-snug:   -0.03em;
+  --ls-normal: -0.01em;
+  --ls-wide:   0.06em;
+  --ls-wider:  0.12em;
+  --ls-widest: 0.18em;
+}
+
+/* ── Classes utilitárias de tipografia ──────────────────────── */
+
+/* Hero / Display */
+.t-hero {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+/* Heading de seção */
+.t-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.03em;
+}
+
+/* Card title */
+.t-card-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-normal);
+  letter-spacing: -0.02em;
+}
+
+/* Body lead (subtítulo de seção) */
+.t-lead {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-relaxed);
+  color: var(--c-gray);
+}
+
+/* Body padrão */
+.t-body {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-relaxed);
+  color: var(--c-gray);
+}
+
+/* Label monospace (seções, badges) */
+.t-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+}
+
+/* Gradiente de texto — light */
+.text-grad {
+  background: var(--g-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradiente de texto — para fundos escuros */
+.text-grad-light {
+  background: var(--g-text-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
